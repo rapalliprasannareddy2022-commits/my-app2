@@ -1,0 +1,47 @@
+.home-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  background: #1890ff;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.header p {
+  margin-top: 10px;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.content h2 {
+  color: #333;
+}
+
+.content p {
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #52c41a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #73d13d;
+}

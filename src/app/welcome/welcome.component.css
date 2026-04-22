@@ -1,0 +1,17 @@
+.table-style {
+  width: 70%;
+  margin: 20px auto;
+  border-collapse: collapse; /* important */
+}
+
+.table-style th,
+.table-style td {
+  border: 2px solid black; /* lines */
+  padding: 10px;
+  text-align: center;
+}
+
+.table-style th {
+  background-color: #1890ff;
+  color: white;
+}
