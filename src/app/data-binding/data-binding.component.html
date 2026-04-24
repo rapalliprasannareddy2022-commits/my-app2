@@ -1,0 +1,13 @@
+<p>data-binding works!</p>
+<!-- interpolation -->
+<h3>My name is {{name}}</h3>
+<h3>My age is{{30}}</h3>
+
+<!-- propertiybinding -->
+<button [disabled]="isInValid">upload</button>
+
+<!-- event bining -->
+<button (click)="submit()">submit</button>
+
+<!-- two wway binging -->
+<input type="text"[(ngModel)]="phone">

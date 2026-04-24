@@ -54,3 +54,5 @@ SetUp:
     git push                       //  100%
 
     ***) first time suggestion command with -f
+
+    event binding ni html lo click button rasthea ts lo submit function lo vealthundhi event binging
