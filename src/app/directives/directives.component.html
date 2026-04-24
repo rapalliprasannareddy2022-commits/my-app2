@@ -1,0 +1,35 @@
+<p>directives works!</p>
+<!-- structuraldirtives :*ngFor,*ngIf -->
+<p *ngFor="let state of states">{{state}}</p>
+<ul>
+    <li *ngFor="let state of states">{{state}}</li>
+</ul>
+
+<!-- states dropdown -->
+<select name="" id="">
+    <option value="" *ngFor="let state of states">{{state}}</option>
+</select>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td [ngStyle]="{'color':user.age<35?'green':'blue' }" 
+                [ngClass]="{'young':user.age<35, 'old':user.age>35}"
+                    >
+                {{user.age}}</td>
+
+
+
+        </tr>
+    </tbody>
+</table>
+<!-- *ngif condition -->
+<!-- true flase -->
+<h1 *ngIf="isShow">hello</h1>
