@@ -1,0 +1,78 @@
+<div class="container">
+  <!-- LEFT SIDE -->
+  <div class="left">
+    <p>Products Works!</p>
+     <input type="text" placeholder="Search" class="search-box">
+
+    <button class="btn-blue"(click)="onlyFreeDelivery()">OnlyFreeDelivery</button>
+
+    <br><br>
+
+    <button class="btn-red" (click)="pricelowtohigh()">Price Low to High</button>
+    <button class="btn-red" (click)="pricehightolow()">Price High to Low</button>
+    <button class="btn-blue" (click)="ratinglowtohigh()">Rating Low to High</button>
+    <button class="btn-green" (click)="ratinghightolow()">Rating High to Low</button>
+
+    <button class="btn-cyan" (click)="discount()">Apply 50% Discount</button>
+    <button class="btn-cyan" (click)="priceWithDeliveryCharges()">Price with Delivery Charges</button>
+
+    <button class="btn-green" (click)="totalprice()">Total Price</button>
+    <button class="btn-green" (click)="totalItems()">Total Cart Items</button>
+   <br><br>
+  
+    
+
+    <!-- TABLE -->
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>S No</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Rating</th>
+          <th>Free Delivery</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let product of products; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.rating }}</td>
+          <td>{{ product.freeDelivery ? 'Yes' : 'No' }}</td>
+          <td>
+            <button class="delete-btn" (click)="delete(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+   <div class="right">
+
+    <h3>Add Product</h3>
+
+    <label>Name:</label><br>
+    <input type="text" [(ngModel)]="name">
+
+    <br><br>
+
+    <label>Price:</label><br>
+    <input type="number" [(ngModel)]="price">
+
+    <br><br>
+
+    <label>Rating:</label><br>
+    <input type="number" [(ngModel)]="rating">
+
+    <br><br>
+
+    <label>Free Delivery:</label><br>
+    <input type="radio" name="free" [(ngModel)]="freeDelivery" [value]="true"> YES
+    <input type="radio" name="free" [(ngModel)]="freeDelivery" [value]="false"> NO
+ <br><br>
+ <button class="btn-green" (click)="addcart()">Add to Cart</button>
+
+</div>
