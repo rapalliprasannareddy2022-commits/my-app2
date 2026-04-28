@@ -16,6 +16,7 @@ import { UsersComponent } from './users/users.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import{ HttpClientModule} from '@angular/common/http';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import{ HttpClientModule} from '@angular/common/http';
     PipesComponent,
     UsersComponent,
     ProductsComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
