@@ -38,6 +38,16 @@ export class VehiclesComponent {
 
 
   }
+  pagevehicles(page:number){
+    this.vehicleService.getpagevehicles(page).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+      },
+      (error:any)=>{
+        alert("invalid server service");
+      }
+    )
+  }
   deleteVehicle(id:string){
     this.vehicleService.deleteVehicles(id).subscribe(
       (data:any)=>{
