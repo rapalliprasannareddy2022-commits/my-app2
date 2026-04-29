@@ -21,6 +21,23 @@ export class VehiclesComponent {
     
     
   }
+  column:string="";
+  order:string="";
+  sortVehicle(){
+   this.vehicleService
+   .getsortvehicles(this.column,this.order).subscribe(
+    (data:any)=>{
+      this.vehicles=data;
+    },
+    (error:any)=>{
+      alert("invalid server error");
+
+    }
+
+   )
+
+
+  }
   deleteVehicle(id:string){
     this.vehicleService.deleteVehicles(id).subscribe(
       (data:any)=>{
@@ -33,6 +50,18 @@ export class VehiclesComponent {
       }
       )
     
+  }
+  term:string="";
+  filtervehicle(){
+    this.vehicleService.getFilteredvehicles(this.term).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+      },
+      (error:any)=>{
+        alert("internal server error");
+
+      }
+    )
   }
 
 }
