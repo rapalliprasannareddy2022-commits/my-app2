@@ -1,0 +1,17 @@
+<p>flipcart works!</p>
+<div class="container">
+    <div *ngFor="let flipcart of flipcart" class="k">
+        <img [src]="flipcart.image" alt="">
+        <p class="num">{{flipcart.id }}</p>
+        <h3>{{flipcart.title}}</h3>
+        <p class="price">{{flipcart.price}}</p>
+        <P class="description">{{flipcart.description}}</P>
+        <h1 class="category">{{flipcart.category}}</h1>
+        <p class="rating">⭐{{flipcart.rating.rate}} {{flipcart.rating.count}}</p>
+
+    
+
+        
+    </div>
+
+</div>
