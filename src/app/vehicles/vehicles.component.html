@@ -1,6 +1,9 @@
 <p>vehicles works!</p>
 <input type="text" placeholder="search"[(ngModel)]="term">
+
 <button class="red-button" (click)="filtervehicle()">search</button>
+<button class="green-button" (click)="getvehiclesWithParams()">search2</button>
+<button class="green-button"  (click)="getvehiclesWithParams()">sort2</button>
 <label for="">Column:</label>
 <select [(ngModel)]="column">
     <option value="color">color</option>
@@ -62,5 +65,11 @@
 </table>
 <button class="yellow-button" (click)="pagevehicles(i+1)"
 *ngFor="let page of [].constructor(10); let i =index">
+{{i+1}}
+</button>
+<hr>
+<button calss="green-button" (click)="getvehiclesWithParams(i+1)"
+
+*ngFor="let page of [].constructor(10); let i=index">
 {{i+1}}
 </button>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { createComponent, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
@@ -14,6 +14,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { AccountComponent } from './account/account.component';
 import { FlipcartComponent } from './flipcart/flipcart.component';
 import { MailComponent } from './mail/mail.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
     {path:'vehicles',component:VehiclesComponent},
     { path:'account',component:AccountComponent},
     {path:'flipcart',component:FlipcartComponent},
-    {path:'mail',component:MailComponent}
+    {path:'mail',component:MailComponent},
+    {path:'create-vehicle',component:CreateVehicleComponent}
 
     
   ]},

@@ -73,5 +73,15 @@ export class VehiclesComponent {
       }
     )
   }
+  getvehiclesWithParams(page:number=1){
+    this.vehicleService.getvehiclesWithParams(this.term,this.column,this.order,page).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+      },
+      (error:any)=>{
+        alert("invalid server error");
+      }
+    )
+  }
 
 }
